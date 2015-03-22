@@ -1,0 +1,22 @@
+{
+  "name": "test-palindromos",
+  "version": "0.0.0",
+  "description": "introduction to test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "~2.1.2",
+    "mocha": "~2.2.1",
+    "karma-mocha": "~0.1.10",
+    "karma": "~0.12.31",
+    "karma-chrome-launcher": "~0.1.7",
+    "karma-firefox-launcher": "~0.1.4",
+    "karma-chai": "~0.1.0",
+    "karma-mocha-reporter": "~1.0.2",
+    "karma-spec-reporter": "0.0.16"
+  }
+}
