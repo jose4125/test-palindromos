@@ -6,7 +6,7 @@ describe('Palindromos', function () {
   before(function () {
     palindrome = Object.create(Palindrome);
   });
-  context('when is a empty string or a single word', function () {
+  context('when is a empty string or a single character', function () {
     it('should return true if is an empty string', function () {
       palindrome.constructor('');
       expect(palindrome.isPalindrome()).to.be.true;
@@ -16,6 +16,12 @@ describe('Palindromos', function () {
       expect(palindrome.isPalindrome()).to.be.true;
     });
   });
+  context('when is more than one character', function () {
+    it('should return false when the string have two differents characters', function () {
+      palindrome.constructor('ab');
+      expect(palindrome.isPalindrome()).to.be.false;
+    });
+  })
 });
 
 
