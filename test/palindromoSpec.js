@@ -29,6 +29,10 @@ describe('Palindromos', function () {
         palindrome.constructor('reader');
         expect(palindrome.isPalindrome()).to.be.false;
     });
+    it ('should return true if the first character is uppercase, palindrome checking is case insensitive', function () {
+      palindrome.constructor('Radar');
+      expect(palindrome.isPalindrome()).to.be.true;
+    })
   })
 });
 
