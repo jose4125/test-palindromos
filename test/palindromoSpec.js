@@ -21,6 +21,14 @@ describe('Palindromos', function () {
       palindrome.constructor('ab');
       expect(palindrome.isPalindrome()).to.be.false;
     });
+    it('should return true with "radar" string', function () {
+      palindrome.constructor('radar');
+      expect(palindrome.isPalindrome()).to.be.true;
+    });
+    it('should return false, not every word that begins and ends with same letter is palindrome', function () {
+        palindrome.constructor('reader');
+        expect(palindrome.isPalindrome()).to.be.false;
+    });
   })
 });
 
