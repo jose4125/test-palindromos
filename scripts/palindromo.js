@@ -7,6 +7,8 @@ var Palindrome = (function () {
     isPalindrome: function () {
       if (!this.message) {
         return true;
+      }else {
+        return true;
       }
     }
   };

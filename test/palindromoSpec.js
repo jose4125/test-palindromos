@@ -11,6 +11,10 @@ describe('Palindromos', function () {
       palindrome.constructor('');
       expect(palindrome.isPalindrome()).to.be.true;
     });
+    it('should return true if is a single character', function () {
+      palindrome.constructor('a');
+      expect(palindrome.isPalindrome()).to.be.true;
+    });
   });
 });
 
