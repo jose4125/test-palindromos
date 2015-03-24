@@ -32,8 +32,14 @@ describe('Palindromos', function () {
     it ('should return true if the first character is uppercase, palindrome checking is case insensitive', function () {
       palindrome.constructor('Radar');
       expect(palindrome.isPalindrome()).to.be.true;
+    });
+  });
+  context('when the sentences have spaces and special characters', function () {
+    it('should return true if is palindrome and have spaces', function () {
+      palindrome.constructor('A man a plan a canal Panama');
+      expect(palindrome.isPalindrome()).to.be.true;
     })
-  })
+  });
 });
 
 
