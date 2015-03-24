@@ -2,7 +2,7 @@
 var Palindrome = (function () {
   var Palindrome = {
     constructor: function (message) {
-      this.message = message.toLowerCase().replace(/\s/g, '');
+      this.message = message.toLowerCase().replace(/[\\.&+%#*?\[^\]$()@{}=!<>|:,-\s]/g, '');
       this.arrayReverse = [];
       this.reverseMessage = '';
     },

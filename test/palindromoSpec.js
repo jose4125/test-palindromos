@@ -38,7 +38,11 @@ describe('Palindromos', function () {
     it('should return true if is palindrome and have spaces', function () {
       palindrome.constructor('A man a plan a canal Panama');
       expect(palindrome.isPalindrome()).to.be.true;
-    })
+    });
+    it('should return true if is palindrome and have special characters', function () {
+      palindrome.constructor('A man, a plan, a canal - Panama!');
+      expect(palindrome.isPalindrome()).to.be.true;
+    });
   });
 });
 
