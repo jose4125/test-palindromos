@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Sat Mar 21 2015 18:05:37 GMT-0500 (COT)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -23,8 +23,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'scripts/**/*.js',
-      'test/**/*Spec.js'
+      './scripts/**/*.js',
+      './test/**/*Spec.js'
     ],
 
 

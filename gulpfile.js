@@ -2,12 +2,13 @@
 var gulp = require('gulp');
 var karma = require('gulp-karma');
 var config = {
-  configFile: 'karma.conf.js',
-  testPath: 'test/**/*Spec.js'
+  configFile: './karma.conf.js',
+  paths: ['./scripts/**/*.js', './test/**/*Spec.js']
 };
 
+
 gulp.task('test', function () {
-  return gulp.src(config.testPath)
+  return gulp.src(config.paths)
     .pipe(karma({
       configFile: config.configFile,
       action: 'run'
@@ -18,7 +19,7 @@ gulp.task('test', function () {
 });
 
 gulp.task('default', function () {
-  return gulp.src(config.testPath)
+  return gulp.src(config.paths)
     .pipe(karma({
       configFile: config.configFile,
       action: 'watch'
