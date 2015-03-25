@@ -40,7 +40,8 @@ describe('Palindromos', function () {
       expect(palindrome.isPalindrome()).to.be.true;
     });
     it('should return true if is palindrome and have special characters', function () {
-      palindrome.constructor('A man, a plan, a canal - Panama!');
+      // palindrome.constructor('A man, a plan, a canal - Panama!');
+      palindrome.constructor('Alli por la tropa portado, traido a ese paraje de maniobras, una tipa como capitan usar boina me dejara, pese a odiar toda tropa por tal ropilla');
       expect(palindrome.isPalindrome()).to.be.true;
     });
   });
