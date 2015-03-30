@@ -19,8 +19,14 @@ var Palindrome = (function () {
     middleMessageLength: function () {
       return Math.floor((this.messageLength() / 2));
     },
+    getLeftCharacter: function (index) {
+      return this.message[index];
+    },
+    getRightCharacter: function (index) {
+      return this.message[this.messageLength() - (index + 1)];
+    },
     verifyEnds: function (index) {
-      if (this.message[index] !== this.message[this.message.length - (index + 1)]) {
+      if (this.getLeftCharacter(index) !== this.getRightCharacter(index)) {
         return false;
       }
       return true;
