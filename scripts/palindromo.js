@@ -13,21 +13,30 @@ var Palindrome = (function () {
     removeSpecialCharacters: function (message) {
       return message.replace(/[\\.&+%#*?\[^\]$()@{}=!<>|:,-\s]/g, '');
     },
+    messageLength: function () {
+      return this.message.length;
+    },
+    middleMessageLength: function () {
+      return Math.floor((this.messageLength() / 2));
+    },
+    verifyEnds: function () {
+      for (var i = 0; i < this.middleMessageLength(); i++) {
+        //dump(i, this.message[i], this.message[this.message.length - (i + 1)]);
+        if (this.message[i] !== this.message[this.message.length - (i + 1)]) {
+          return false;
+        }
+      }
+      return true;
+    },
     isPalindrome: function () {
       if (!this.message) {
         return true;
       }
       dump(this.message);
-      if (this.message.length === 1) {
+      if (this.messageLength() === 1) {
         return true;
       } else {
-        for (var i = 0; i < Math.floor((this.message.length / 2)); i++) {
-          dump(i, this.message[i], this.message[this.message.length - (i + 1)]);
-          if (this.message[i] !== this.message[this.message.length - (i + 1)]) {
-            return false;
-          }
-        }
-        return true;
+        return this.verifyEnds();
       }
     }
   };
