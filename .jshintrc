@@ -82,6 +82,7 @@
     "describe": true,
     "context": true,
     "it": true,
-    "before": true
+    "before": true,
+    "dump": true
     }        // additional predefined global variables
 }
