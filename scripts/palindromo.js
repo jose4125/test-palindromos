@@ -19,14 +19,20 @@ var Palindrome = (function () {
     middleMessageLength: function () {
       return Math.floor((this.messageLength() / 2));
     },
-    verifyEnds: function () {
-      for (var i = 0; i < this.middleMessageLength(); i++) {
-        //dump(i, this.message[i], this.message[this.message.length - (i + 1)]);
-        if (this.message[i] !== this.message[this.message.length - (i + 1)]) {
-          return false;
-        }
+    verifyEnds: function (index) {
+      if (this.message[index] !== this.message[this.message.length - (index + 1)]) {
+        return false;
       }
       return true;
+    },
+    aechEnds: function () {
+      var isEqual;
+      for (var i = 0; i < this.middleMessageLength(); i++) {
+        //dump(i, this.message[i], this.message[this.message.length - (i + 1)]);
+        isEqual = this.verifyEnds(i);
+      }
+      dump('palindrome ' + isEqual);
+      return isEqual;
     },
     isPalindrome: function () {
       if (!this.message) {
@@ -36,7 +42,7 @@ var Palindrome = (function () {
       if (this.messageLength() === 1) {
         return true;
       } else {
-        return this.verifyEnds();
+        return this.aechEnds();
       }
     }
   };
